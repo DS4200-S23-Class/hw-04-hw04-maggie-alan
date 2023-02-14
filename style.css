@@ -1,3 +1,45 @@
 * {
 	font: Arial;
 }
+
+.centered {
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+}
+
+/* create columns using images and text */
+.leftColumn {
+	float: left;
+	width: 60%;
+}
+
+.rightColumn {
+	float: left;
+}
+
+@container (width < 400) {
+
+}
+
+.circle:hover {
+	fill: royalblue;
+}
+
+.circle {
+	fill: pink;
+}
+
+.line {
+	stroke: rgb(0,0,0);
+	stroke-width: 2
+}
+
+.add_border {
+	border: 5px solid black;
+	fill: royalblue;
+}

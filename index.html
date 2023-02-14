@@ -2,49 +2,110 @@
 <html> 
 
 <head>
+    <!--
+        Create title + link stylesheet
+    -->
     <meta charset=utf-8/>
     <title>hw-04</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-
+    <!--
+        Create header
+    -->
     <h1 class="centered">hw-04: Event Handling</h1>
-
+    <!--
+        Create two columns by one row
+    -->
     <div id="2 columns">
         <div class="row">
+            <!--
+                Items in position (0,0)
+            -->
             <div class="leftColumn">
+                <div id="container">
+                    <!--
+                        Create a scatter plot
+                    -->
+                    <p> "Scatter Plot" </p>
+
+                    <svg class="scatter" id="svg_canvas"
+                        height="500" width="500">
+                        <!--
+                            Create the axis for the plot
+                        -->
+                        <line class ="line" x1="0" y1="0" x2="0" y2="500"/>
+                        <line class ="line" x1="0" y1="500" x2="500" y2="500"/>
+                        <!--
+                            Create the original four points
+                        -->
+                        <circle class="circle" cx="50" cy="100" r="10" onClick="buttonClicked()"/>
+                        <circle class="circle" cx="100" cy="200" r="10" onClick="buttonClicked()"/>
+                        <circle class="circle" cx="300" cy="100" r="10" onClick="buttonClicked()"/>
+                        <circle class="circle" cx="450" cy="450" r="10" onClick="buttonClicked()"/>
+
+                    </svg>
+             
+                </div>
 
             </div>
+            <!--
+                Items in position (0,1)
+            -->
             <div class="rightColumn">
+                <p id="last_clicked"></p>
+                <h2>Add a New Point</h2>
 
+                <p>Choose coordinates between 0 and 9, inclusive. </p>
+                
+                <form>
+                    <!--
+                        Select possible x coordinates
+                    -->
+                    <label for="x_coord">Choose an x:</label>
+                    <select id="x_coord" name="x_coord_options">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select><br><br>
+
+                    <!--
+                        Select possible y coordinates
+                    -->
+                    <label for="y_coord">Choose an y:</label>
+                    <select id="y_coord" name="y_coord_options">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select><br><br>
+                    <!--
+                        Button for adding coordinates
+                    -->
+                    <button type="button" id="add_coords_helper" onClick="addCoordsHelper()">Add new coordinates!</button>
+                </form>
             </div>
         </div>
     </div>
 
-    <div class="gen" id="container">
-        <p> "Scatter Plot" </p>
-
-        <svg class="scatter"
-            height="500" width="500">
-
-            <line class ="line" x1="0" y1="0" x2="0" y2="500"/>
-            <line class ="line" x1="0" y1="500" x2="500" y2="500"/>
-            <circle class="circle" id="circle1" cx="50" cy="100" r="10" value = "1, 2" onClick="buttonClicked()"/>
-            <circle class="circle" id="circle2" cx="100" cy="200" r="10" value = "1, 2" onClick="buttonClicked()"/>
-            <circle class="circle" id="circle3" cx="300" cy="100" r="10" value = "1, 2" onClick="buttonClicked()"/>
-            <circle class="circle" id="circle4" cx="450" cy="450" r="10" value = "1, 2" onClick="buttonClicked()"/>
-
-        </svg>
- 
-    </div>
-
-    <div class="gen" id="selected-circle">
-
-    </div>
-
+    <!--
+        Link js file     
+    -->
     <script src="main.js"></script>
 
     <div>
@@ -53,7 +114,13 @@
         -->
         <h2 class="centered">Acknowledgements</h2>
         <ul>
-            https://learntheweb.courses/topics/advanced-svg/
+            <li><a href="https://learntheweb.courses/topics/advanced-svg/">Borders for mouseclicks!</a></li>
+            <li><a href="https://www.w3schools.com/howto/howto_js_toggle_class.asp">Toggle classes!</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">EventListeners!</a></li>
+            <li><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_select_size">HTML dropdown!</a></li>
+            <li><a href="https://www.w3schools.com/graphics/tryit.asp?filename=trysvg_line">Lines/Axis!</a></li>
+            <li>Our TA: Abigail!</li>
+            <li>Our TA: Luca!</li>
         </ul>
     </div>
 </body>

@@ -1,11 +1,14 @@
+/* Make everything Arial */
 * {
 	font: Arial;
 }
 
+/* Center text */
 .centered {
 	text-align: center;
 }
 
+/* Create rows */
 .row {
 	display: flex;
 	flex-direction: row;
@@ -22,24 +25,30 @@
 	float: left;
 }
 
+/* Container for points */
+
 @container (width < 400) {
 
 }
 
+/* Change color on hover */
 .circle:hover {
 	fill: royalblue;
 }
 
+/* Points */
 .circle {
 	fill: pink;
 }
 
+/* Axis */
 .line {
 	stroke: rgb(0,0,0);
 	stroke-width: 2
 }
 
+/* Add border when clicked */
 .add_border {
-	border: 5px solid black;
-	fill: royalblue;
+	stroke-width: 5;
+	stroke: orange;
 }
